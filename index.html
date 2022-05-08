@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black jack</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="game.js"></script>
+</head>
+<body>
+
+    <div class="main_body">
+
+        <div class="heading_container">
+            <h1>Black Jack</h1>
+        </div>
+
+        <button id="play-button" onClick="play()">Play</button>
+
+        <div id="main-content" class="main_content">
+            <div class="cards_container">
+                <div class="dealers_cards">
+                    <p id="dealer-cards-total">Dealer's cards:</p>
+                    <p id="dealer-cards-info">x x x x</p>
+                </div>
+
+                <div class="your_cards">
+                    <p id="your-cards-total">Your cards: </p>
+                    <p id="your-cards-info">x x x x</p>
+                </div>
+            </div>
+
+            <div class="buttons-container">
+                <button class="buttons" id="stand-button" onclick="stand()">Stand</button>
+                <button class="buttons" id="hit-button" onclick="hit()">Hit</button>
+            </div>
+
+            <div class="result">
+                <h1 id="conclusion">You won!!!!!</h1>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

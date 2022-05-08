@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.main_body {
+  color: white;
+}
+
+.heading_container {
+  font-size: 1vw;
+  color: white;
+  padding-left: 15vw;
+  padding-top: 4vw;
+}
+
+.heading_container h1 {
+  text-shadow: .2vw .2vw black;
+}
+
+.main_content {
+  display: none;
+}
+
+#play-button {
+  width: 6vw;
+  height: 2vw;
+  border: none;
+  border-radius: 1vw;
+  margin-left: 17vw;
+  margin-top: 2vw;
+  font-size: 1vw;
+  -webkit-box-shadow: .1vw .2vw black;
+          box-shadow: .1vw .2vw black;
+}
+
+.cards_container {
+  font-size: 1vw;
+  color: white;
+  text-shadow: .1vw .1vw black;
+  padding-left: 16vw;
+}
+
+.buttons {
+  border: none;
+  border-radius: .4vw;
+  width: 4vw;
+  height: 1.1vw;
+}
+
+.buttons:hover {
+  background-color: lightgray;
+}
+
+.buttons:active {
+  background-color: black;
+  color: white;
+}
+
+.buttons-container {
+  padding-left: 15vw;
+}
+
+#conclusion {
+  visibility: hidden;
+  padding-left: 16vw;
+}
+/*# sourceMappingURL=main.css.map */
