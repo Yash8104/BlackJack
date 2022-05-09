@@ -27,6 +27,8 @@ function lose(){
     document.getElementsByClassName("buttons")[1].disabled = "true";
     document.getElementById("conclusion").innerHTML = "You lost! LMAO YOU SUCK SO BAD AHAHHAHA";
     document.getElementById("conclusion").style.visibility = "visible";
+    document.getElementById("restart").style.visibility = "visible";
+
     console.log("lose lose");
 
     document.getElementById("dealer-cards-info").innerHTML = `${dealer_cards}`;
@@ -39,6 +41,8 @@ function win(){
     document.getElementsByClassName("buttons")[1].disabled = "true";
     document.getElementById("conclusion").innerHTML = "You won!!! WOW YOU'RE THE BEST UWU";
     document.getElementById("conclusion").style.visibility = "visible";
+    document.getElementById("restart").style.visibility = "visible";
+
     console.log("win win");
 
     document.getElementById("dealer-cards-info").innerHTML = `${dealer_cards}`;
@@ -109,14 +113,36 @@ function stand(){
             console.log(dealer_total);
         }
 
-        win();
+        if(dealer_total == 21){
+            lose();
+            return;
+        }else if(dealer_total > 21){
+            win();
+            return;
+        }
+
+        if(dealer_total < player_total){
+             win();
+            return;
+        }else if(player_total < dealer_total){
+            lose();
+            return;
+        }else{
+            document.getElementById("conclusion").innerHTML = "Its a draw!";
+            document.getElementById("conclusion").style.visibility = "visible";
+            document.getElementById("restart").style.visibility = "visible";
+            return;
+        }
+
         return;
 
 
-    }else{
+    } else {
         // draw
         document.getElementById("conclusion").innerHTML = "Its a draw!";
         document.getElementById("conclusion").style.visibility = "visible";
+        document.getElementById("restart").style.visibility = "visible";
+
     }
 
     
@@ -131,14 +157,6 @@ function dealer_hit(){
 
     document.getElementById("dealer-cards-info").innerHTML = `${dealer_cards}`;
     document.getElementById("dealer-cards-total").innerHTML = `Dealer's cards: ${dealer_total}`;
-
-    if(dealer_total == 21){
-        lose();
-        return;
-    }else if(dealer_total > 21){
-        win();
-        return;
-    }
 
 
 }
@@ -184,5 +202,14 @@ function pick_random_cards(){
     var random_num = Math.floor(Math.random() * cards.length);
 
     return cards[random_num];
+
+}
+
+
+function reset(){
+
+
+    location.reload();
+
 
 }
