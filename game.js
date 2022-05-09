@@ -153,6 +153,8 @@ function clear_card_dealer(){
 
 function hit(){
 
+    
+
     player_cards.push(pick_random_cards());
     player_total = get_total(player_cards);
     console.log(player_total);
